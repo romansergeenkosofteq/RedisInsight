@@ -2,7 +2,7 @@
   "name": "redisinsight",
   "version": "1.0.0",
   "description": "End-to-end tests",
-  "main": "index.js",
+  "main": "../../redisinsight/main.dev.ts",
   "scripts": {
     "test:live": "testcafe --live chrome ",
     "start:api": "cross-env SERVER_STATIC_CONTENT=true yarn --cwd ../../redisinsight/api start:prod",
@@ -15,7 +15,8 @@
     "test:chrome": "testcafe --concurrency 1 chrome tests/ -r html:./report/report.html,spec -e",
     "test:chrome:ci": "testcafe --concurrency 1 chromium:headless tests/ -r spec,json:results/e2e.results.json -e",
     "test": "yarn test:chrome",
-    "lint": "eslint . --ext .ts,.js,.tsx,.jsx"
+    "lint": "eslint . --ext .ts,.js,.tsx,.jsx",
+    "test:desktop": "mocha desktopTests/spec.ts"
   },
   "keywords": [],
   "author": "",
@@ -30,7 +31,11 @@
     "eslint-config-airbnb": "^18.2.0",
     "eslint-config-airbnb-typescript": "^9.0.0",
     "eslint-plugin-import": "2.20.2",
+    "mocha": "5.0.0",
+    "spectron": "^15.0.0",
     "testcafe": "1.14.2",
+    "chai": "^4.3.4",
+    "chai-as-promised": "^7.1.1",
     "testcafe-reporter-html": "1.4.6",
     "testcafe-reporter-json": "^2.2.0",
     "testcafe-reporter-spec": "2.1.1",
