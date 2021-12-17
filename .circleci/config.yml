@@ -433,7 +433,7 @@ jobs:
               exit 0;
             fi
 
-            UPGRADES_LINK=$UPGRADES_LINK_STAGE SEGMENT_WRITE_KEY=$SEGMENT_WRITE_KEY_STAGE yarn package:<< parameters.env >>
+            UPGRADES_LINK=$UPGRADES_LINK_STAGE SEGMENT_WRITE_KEY=MWGOG146oPdLSWO5mZy3eM1NzcC3alRF yarn package:<< parameters.env >>
       - persist_to_workspace:
           root: .
           paths:
@@ -475,7 +475,7 @@ jobs:
               exit 0;
             fi
 
-            UPGRADES_LINK=$UPGRADES_LINK_STAGE SEGMENT_WRITE_KEY=$SEGMENT_WRITE_KEY_STAGE yarn package:<< parameters.env >>
+            UPGRADES_LINK=$UPGRADES_LINK_STAGE SEGMENT_WRITE_KEY=MWGOG146oPdLSWO5mZy3eM1NzcC3alRF yarn package:<< parameters.env >>
             rm -rf release/mac
           no_output_timeout: 15m
       - persist_to_workspace:
@@ -515,7 +515,7 @@ jobs:
               exit 0;
             fi
 
-            UPGRADES_LINK=$UPGRADES_LINK_STAGE SEGMENT_WRITE_KEY=$SEGMENT_WRITE_KEY_STAGE yarn package:<< parameters.env >>
+            UPGRADES_LINK=$UPGRADES_LINK_STAGE SEGMENT_WRITE_KEY=MWGOG146oPdLSWO5mZy3eM1NzcC3alRF yarn package:<< parameters.env >>
             rm -rf release/win-unpacked
           shell: bash.exe
           no_output_timeout: 20m
