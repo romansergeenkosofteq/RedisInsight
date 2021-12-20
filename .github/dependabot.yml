@@ -1,0 +1,73 @@
+To get started with Dependabot version updates, you'll need to specify which
+# package ecosystems to update and where the package manifests are located.
+# Please see the documentation for all configuration options:
+# https://help.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
+
+version: 2
+updates:
+  - package-ecosystem: npm
+    open-pull-requests-limit: 100
+    directory: /
+    schedule:
+      interval: daily
+    allow:
+      - dependency-name: "json-schema"
+      - dependency-name: "ansi-regex"
+      - dependency-name: "nth-check"
+      - dependency-name: "semver-regex"
+      - dependency-name: "ansi-html"
+      - dependency-name: "trim-newlines"
+      - dependency-name: "glob-parent"
+      - dependency-name: "trim"
+  - package-ecosystem: npm
+    directory: /redisinsight
+    schedule:
+      interval: daily
+    allow:
+      - dependency-name: "json-schema"
+      - dependency-name: "ansi-regex"
+      - dependency-name: "tar"
+  - package-ecosystem: npm
+    open-pull-requests-limit: 100
+    directory: /redisinsight/api
+    schedule:
+      interval: daily
+    allow:
+      - dependency-name: "swagger-ui-dist"
+      - dependency-name: "json-schema"
+      - dependency-name: "validator"
+      - dependency-name: "class-validator"
+      - dependency-name: "ansi-regex"
+      - dependency-name: "tmpl"
+      - dependency-name: "axios"
+      - dependency-name: "tar"
+      - dependency-name: "class-transformer"
+  - package-ecosystem: npm
+    directory: /redisinsight/ui/src/packages/redisearch
+    schedule:
+      interval: daily
+    allow:
+      - dependency-name: "json-schema"
+      - dependency-name: "trim"
+  - package-ecosystem: npm
+    directory: /redisinsight/ui/src/packages/clients-list-example
+    schedule:
+      interval: daily
+    allow:
+      - dependency-name: "json-schema"
+      - dependency-name: "trim"
+  - package-ecosystem: npm
+    directory: /redisinsight/ui/src/packages/redis-app-plugin-api
+    schedule:
+      interval: daily
+  - package-ecosystem: npm
+    directory: /tests/e2e
+    schedule:
+      interval: daily
+    allow:
+      - dependency-name: "ansi-regex"
+      - dependency-name: "glob-parent"
+  - package-ecosystem: docker
+    directory: /
+    schedule:
+      interval: daily
